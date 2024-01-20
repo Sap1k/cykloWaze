@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}O nás{% endblock %}
+{% set page = 'details' %}
+{% block content %}
+<h2 class="mt-3 ms-2"><span id="counter_id" hidden="hidden">{{ id }}</span><span id="name"></span></h2>
+<h4 class="mt-1 ms-2" id="route"></h4>
+<div class="container-fluid">
+    <div class="row" id="graph_container">
+    </div>
+</div>
+    <script src="/static/js/details.js"></script>
+    <script>drawDetails()</script>
+{% endblock %}

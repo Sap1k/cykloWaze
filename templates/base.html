@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} | CykloWaze</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{url_for('main')}}">CykloWaze</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link {{'active' if page == 'index'}}" aria-current="page" href="{{url_for('main')}}">Domů</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link {{'active' if page == 'history'}}" aria-current="page" href="{{url_for('history')}}">Historie měření</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link {{'active' if page == 'aboutus'}}" aria-current="page" href="{{url_for('about_us')}}">O nás</a>
+        </li>
+      </ul>
+        <span class="navbar-text">
+            <a href="https://github.com" style="text-decoration: none;"><i class="fa-brands fa-github"></i> Github</a>
+      </span>
+    </div>
+  </div>
+</nav>
+{% block content %}
+{% endblock %}
+<script src="https://kit.fontawesome.com/763e5bb89f.js" crossorigin="anonymous"></script>
+<script src="/static/js/common.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

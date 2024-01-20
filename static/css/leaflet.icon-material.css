@@ -1,0 +1,17 @@
+/**
+ * Author: Ilya Ilyankou <https://github.com/ilyankou>
+ * License: MIT
+ * Version: 1.0
+ */
+
+.l-icon-material {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    text-align: center;
+}
+
+.l-icon-material .material-icons {
+    font-size: 17px;
+}
